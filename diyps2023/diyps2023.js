@@ -80,7 +80,7 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   } else if (toolChoice == '4') {
     
     let randomTree = random([tree1, tree2, tree3]);
-    image(randomTree, mouseX, mouseY, 50, 50);
+    image(randomTree, mouseX, mouseY, 100, 100);
   } else if (key == '5') { // this tool calls a function
     stroke(0, 0, 255);
     let mountains = random([mountain1, mountain2, mountain3]);
@@ -105,7 +105,7 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
     let bushes = random([bush1,bush2,bush3]);
     image(bushes, mouseX, mouseY, 100, 100);
   } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
-    image(moon, mouseX, mouseY, 50, 50);
+ 
     
   }
  }
