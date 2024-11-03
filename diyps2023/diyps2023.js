@@ -30,7 +30,7 @@ bush2 = loadImage('images/bush2.png');
 bush3 = loadImage('images/bush3.png');
 clouds1 = loadImage('images/clouds1.png');
 clouds2 = loadImage('images/clouds2.png');
-grass = loadImage('images/grass.png');
+grass = loadImage('images/grass.jpg');
 moon = loadImage('images/moon.png');
 sun = loadImage('images/sun.png');
 mountain1 = loadImage('images/mountain1.png');
@@ -78,35 +78,32 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
     fill(250,250,250,200);
     ellipse(mouseX, mouseY, 10, 10);
   } else if (toolChoice == '4') {
-
-     image(sun, mouseX, mouseY, 50, 50);
+    
+    let randomTree = random([tree1, tree2, tree3]);
+    image(randomTree, mouseX, mouseY, 50, 50);
   } else if (key == '5') { // this tool calls a function
     stroke(0, 0, 255);
-    testbox(20, 20, 200);
-    testbox(200, 20, 20);
+    let mountains = random([mountain1, mountain2, mountain3]);
+    image(mountains, mouseX, mouseY, 300, 300);
     
  // make testbox do something!
  //   line(mouseX, mouseY, pmouseX, pmouseY);
   } else if (toolChoice == '6') {
 
-    stroke(200);
-    line(mouseX, mouseY, pmouseX, pmouseY);
+   image(grass, mouseX, mouseY, 300, 300); 
   } else if (toolChoice == '7') {
 
-    fill(100, 200, 100);
-    rect(mouseX, mouseY, 20, 20);
+    let randocloud = random([clouds1,clouds2]);
+    image(randocloud, mouseX, mouseY, 100, 100);
   } else if (toolChoice == '8') {
 
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 20, 20);
+    image(sun, mouseX, mouseY, 100, 100);
   } else if (toolChoice == '9') {
 
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 40, 40);
+    image(moon, mouseX, mouseY, 70, 70);
   } else if (toolChoice == '0') {
-    stroke(0, 0);
-    fill(random(255), random(255), random(255), random(255));
-    rect(mouseX, mouseY, 200, 150);
+    let bushes = random([bush1,bush2,bush3]);
+    image(bushes, mouseX, mouseY, 100, 100);
   } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
     image(moon, mouseX, mouseY, 50, 50);
     
